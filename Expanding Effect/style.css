@@ -1,22 +1,17 @@
 .panel1{
-    background: url(./photo_2023-03-02_22-18-04.jpg) center center / 100% no-repeat;
+    background: url(./photo_2023-03-02_22-18-04.jpg) center  / 100% no-repeat;
 }
 .panel2 {
     background: url(./20191016_141304.jpg) center center / 100% no-repeat;
-    
 }
 .panel3{
     background: url(./20211015_143004.jpg) center center / 100% no-repeat;
-    
 }
 .panel4 {
-    
     background: url(./20211016_124906.jpg) center center / 100% no-repeat;
-    
 }
 .panel5 {
     background: url(./20211013_192401.jpg) center center / 100% no-repeat;
-    
 }
 *{
     box-sizing: border-box;
@@ -42,6 +37,7 @@ body{
     margin: 10px;
     position: relative;
     transition: flex 0.75s ease-in;
+    width: 100%;
 }
 .panel h3{
     font-size: 24px;
@@ -65,5 +61,15 @@ body{
     .panel:nth-of-type(4),
     .panel:nth-of-type(5){
         display: none;
+    }
+    .panel{
+        height: 65vh;
+        border-radius: 20%;
+        padding: 0;
+    }
+    .panel h3{
+        bottom: 30px;
+        left: 40px;
+        font-size: 12px;
     }
 }
