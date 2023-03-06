@@ -16,6 +16,8 @@ body{
     position: relative;
     transform-origin: top left;
     transition:  transform 0.5s ease;
+    width: 100vw;
+    min-height: 100vh;
 }
 .content{
     margin: 0 auto;
@@ -184,6 +186,7 @@ button svg{
     fill: #333;
 }
 @media (max-width: 1370px){
+    
     .content{
         max-width: 950px;
     }
