@@ -15,11 +15,14 @@ closed.addEventListener('click', () => {
 const image = document.querySelectorAll('.images');
 image.forEach((images) => {
     images.addEventListener('click', () => {
-       removeActiveClass()
+        
+        removeActiveClass()
        images.classList.add('active')
+       
     })
     
 })
+
 function removeActiveClass() {
     image.forEach(images => {
         images.classList.remove('active')
