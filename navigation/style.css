@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Smokum&display=swap');
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+    font-size: 1 rem;
+    overflow-x: hidden;
+    margin: 0 auto;
+    background-color: #333;
+    color: #222;
+}
+.container{
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    transform-origin: top left;
+    transition:  transform 0.5s ease;
+}
+.content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+    transition: 0.75s ease;
+}
+.container.show-nav + nav li{
+    transform: translate(0);
+    transition-delay: 0.3s;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    line-height: 150%;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    display: flex;
+    align-items: center;
+    line-height: 120%;
+}
+h3{
+    font-size: 1.2rem;
+    line-height: 120%;
+
+}
+.images-wrap{
+    display: flex;
+    gap: 15px;
+}
+.images{
+    max-width:600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    height: 60vh;
+    cursor: pointer;
+    flex: 0.5;
+}
+.images img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.images.active{
+    flex: 5;
+}
+nav svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: inherit;
+    fill: #fefefe;
+}
+
+.circle-container{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 30, 0);
+    position: fixed;
+    top: -75px;
+    left: -75px;
+    z-index: 100;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+.nav-list{
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: #fefefe;
+    
+
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 150px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transform: translateX(-100%);
+    transition:transform 0.75s ease;
+    
+}
+.list-item + .list-item{
+    margin-left: 15px;
+    transform: translate(-150%);
+}
+.list-item + .list-item + .list-item{
+    /* transform: translate(-200%); */
+    margin-left: 30px;
+}
+.list-link{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+.container.show-nav + .circle{
+    transform: rotate(-80deg);
+}
+
+.close{
+    display:none
+}
+.open{
+    display:none;
+}
+
+button{
+    background: inherit; 
+    border: none;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    transition: 0.75s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+button svg{
+    width: 100%;
+    height: 100%;
+    fill: #333;
+}
+@media (max-width: 1370px){
+    .content{
+        max-width: 950px;
+    }
+}
+@media (max-width: 1185px){
+    .content{
+        max-width: 850px;    
+    }
+    .images{
+          max-width: 500px;  
+    }
+}
+@media (max-width: 1073px){
+    .content{
+        max-width: 750px;    
+    }
+    .images{
+          max-width: 400px;  
+    }
+}
+@media (max-width: 970px){
+    .content{
+        padding-top: 50px;
+        max-width: 550px;    
+    }
+    .images{
+          max-width: 400px;  
+    }
+    .images:nth-of-type(4),
+    .images:nth-of-type(5){
+        display: none;
+    }
+    .images{
+        height: 65vh;
+        border-radius: 20%;
+        padding: 0;
+    }
+    .list-item{
+        color:rgb(255, 30, 0);
+    }
+}
+@media (max-width: 690px){
+
+.circle-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+}
+@media (max-width: 560px){
+    .content{
+        max-width: 360px;
+    } 
+}
